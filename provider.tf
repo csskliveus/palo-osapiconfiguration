@@ -9,7 +9,7 @@ terraform {
   
   provider "panos" {
     # Configuration options
-    hostname = "52.156.70.150"
+    hostname = 
     username = "testuser"
-    password = "testP@ssw0rd"
+    password = 
   }
