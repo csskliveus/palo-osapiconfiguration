@@ -1,6 +1,7 @@
 variable service_list {
     description = "Service list"
-
+    type  = map(any)
+    default = {}
 }
 
 /*

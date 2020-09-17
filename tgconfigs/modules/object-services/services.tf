@@ -4,7 +4,7 @@ resource "panos_service_object" "services" {
     #vsys = "vsys1" // optional. defaults to vsys1
     protocol = lookup(each.value, "protocol") 
     description = each.key
-    source_port = lookup(each.value, "source_port") 
+    #source_port = lookup(each.value, "source_port") 
     destination_port = lookup(each.value, "destination_port") 
     //tags = ["internal", "dmz"]
 }

@@ -1,5 +1,5 @@
 terraform {
-    source = "../../modules/addressobject"
+    source = "../../modules/object-address"
 }
 
 include {
@@ -61,6 +61,19 @@ inputs = {
       address_value          = "voyagerapp.azurewebsites.net"
       address_description    = "voyagerapp-appservice-public"
       add_obj_type           = "fqdn"
+    },
+    "func-cosmos-10.179.0.0_16" = {
+      address_name           = "func-cosmos-10.179.0.0_16"
+      address_value          = "10.179.0.0/16"
+      address_description    = "func-cosmos-10.179.0.0_16"
+      add_obj_type           = "ip-netmask"
+    },
+    "net-func-10.178.0.0_16" = {
+      address_name           = "net-func-10.178.0.0_16"
+      address_value          = "10.178.0.0/16"
+      address_description    = "net-func-10.178.0.0_16"
+      add_obj_type           = "ip-netmask"
     }
+
   }
 }
