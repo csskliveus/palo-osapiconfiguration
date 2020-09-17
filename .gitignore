@@ -1,1 +1,6 @@
+*.tfstate*
+*.log
+*.terrform*
+*.terragrunt-cache/*
+.terragrunt*
 .terraform*

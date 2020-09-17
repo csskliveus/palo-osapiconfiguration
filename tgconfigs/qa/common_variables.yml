@@ -1,0 +1,10 @@
+rg_location    : "westus"
+default_tags: 
+  environment : qa
+  project     : "woofware"
+  owner       : "chandrasekhar.konda@vca.com"
+  vendor      : "vca"
+  creator     : "chandrasekhar.konda@vca.com"
+  application : "woofware"
+tags:
+  module: "careplanner"
