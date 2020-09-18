@@ -1,0 +1,37 @@
+
+# Terraform settings are gathered into terraform blocks.
+terraform {
+  required_providers {
+    azurerm = {
+      //source = "hashicorp/azurerm"
+      azurerm = ">= 2.20.0"
+    }
+    panos = {
+      //source = "paloaltonetworks/panos"
+      version = "1.6.3"
+    }
+  }
+  required_version = ">= 0.12.29"
+}
+
+
+provider "azurerm" {
+  #version = ">= 1.38.9"
+  # The "feature" block is required for AzureRM provider 2.x.
+  # If you are using version 1.x, the "features" block is not allowed.
+  subscription_id = "837b51ec"
+  client_id       = "c16ab2f1"
+  client_secret   = "zjPMKRp"
+  tenant_id       = "a2bdfa5"
+
+  features {}
+}
+
+  provider "panos" {
+    #source = "PaloAltoNetworks/panos"
+    #version = "1.6.3"
+    # Configuration options
+    hostname =  "" #$env:PANOS_HOSTNAME # $env:PANOS_API_KEY #
+    api_key  = "3dUVSVkkwQ0hWQ"
+    verify_certificate = false
+  }
