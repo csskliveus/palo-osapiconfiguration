@@ -1,5 +1,5 @@
 terraform {
-    source = "../../modules/network-interfaces"
+    source = "../../modules/policies-natrules"
 }
 
 include {
@@ -20,7 +20,7 @@ inputs = {
             sat_address_type        = "interface-address"
             sat_interface           = "ethernet1/2"
             dat_type                = "None"
-        }
+        },
          "Outbound-NAT" = {
             type                    = "ipv4"
             source_zones            = ["trust"]
@@ -34,4 +34,5 @@ inputs = {
             sat_interface           = "ethernet1/1"
             dat_type                = "None"
         }
+    }
 }

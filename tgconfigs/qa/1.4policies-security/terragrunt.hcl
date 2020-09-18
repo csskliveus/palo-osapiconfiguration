@@ -1,5 +1,5 @@
 terraform {
-    source = "../../modules/network-interfaces"
+    source = "../../modules/policies-security"
 }
 
 include {
@@ -8,8 +8,8 @@ include {
 
 inputs = {
     security_rules = {
-        "inbound = {
-            type                = "universal"
+        "inbound" = {
+            rule_type           = "universal"
             source_zones        = ["untrust"]   // created in UI
             source_addresses    = ["AppGW-subnet"]
             source_users        = ["any"]
@@ -91,7 +91,7 @@ inputs = {
             destination_zones   = ["any"]   // created in UI
             destination_addresses = ["any"]
             applications        = ["any"]
-            services            = ["any","]  // created in UI
+            services            = ["any"]  // created in UI
             categories          = ["any"]
             action              = "allow"
 
@@ -104,7 +104,7 @@ inputs = {
             destination_zones   = ["any"]   // created in UI
             destination_addresses = ["any"]
             applications        = ["any"]
-            services            = ["any","]  // created in UI
+            services            = ["any"]  // created in UI
             categories          = ["any"]
             action              = "allow"
 
@@ -117,7 +117,7 @@ inputs = {
             destination_zones   = ["any"]   // created in UI
             destination_addresses = ["any"]
             applications        = ["any"]
-            services            = ["any","]  // created in UI
+            services            = ["any"]  // created in UI
             categories          = ["any"]
             action              = "deny"
 
@@ -131,7 +131,7 @@ inputs = {
             destination_zones   = ["any"]   // created in UI
             destination_addresses = ["any"]
             applications        = ["any"]
-            services            = ["any","]  // created in UI
+            services            = ["any"]  // created in UI
             categories          = ["any"]
             action              = "deny"
 

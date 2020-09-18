@@ -1,4 +1,4 @@
-variable security_rule {
+variable security_rules {
     type        = map(any)
     description = "security rule"
     default     = {}

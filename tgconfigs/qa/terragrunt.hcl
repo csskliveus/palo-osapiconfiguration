@@ -8,8 +8,8 @@ remote_state {
 
   config    = {
       key   = "${path_relative_to_include()}/terraform.tfstate"  # with this, tf state folder structure resembles terragrunt folder structure.
-      resource_group_name  = "vca-qa-rg-uw"
-      storage_account_name = "qaterraformstate1"
+      resource_group_name  = "uw"
+      storage_account_name = "terraformstate1"
       container_name       =  "palo-alto"
   }
    

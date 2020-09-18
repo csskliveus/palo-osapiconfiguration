@@ -1,11 +1,14 @@
 resource "panos_nat_rule" "example" {
-    name = "my nat rule"
-    source_zones = ["zone1"]
-    destination_zone = "zone2"
-    to_interface = "ethernet1/3"
-    source_addresses = ["any"]
-    destination_addresses = ["any"]
-    sat_type = "none"
-    dat_type = "static"
-    dat_address = "my dat address object"
+    for_each                = var.security_nat_rules
+    name                    = each.key
+    source_zones            = each.source_zones
+    destination_zone        = each.destination_zone
+    to_interface            = each.to_interface
+    source_addresses        = each.source_addresses
+    destination_addresses   = each.destination_addresses
+    sat_type                = each.sat_type
+    sat_address_type        = each.sat_address_type
+    sat_interface           = each.sat_interface
+    dat_type                = each.dat_type
+    
 }
