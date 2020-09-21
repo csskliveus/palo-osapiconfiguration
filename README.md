@@ -11,6 +11,7 @@ Yet to do
   2. DNS proxy feature is not available in Panos terraform module. 
   3. Need to find out what other features are not available, work in progress.
 
+API Basics: 
   API Type Description
 	•   keygen- Generate an API Key (not shown in API Browser)
 	•   config- Retrieve or modify the configuration
